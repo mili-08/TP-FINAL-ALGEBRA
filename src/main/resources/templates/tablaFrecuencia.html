@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Probabilidad de Poisson</title>
+    <link rel="stylesheet" href="/css/tablaStyle.css">
+</head>
+<body>
+    <section>
+        <h1>Tabla de Probabilidades de Poisson</h1>
+        <table>
+            <thead>
+            <tr>
+                <th>Persona</th>
+                <th>Probabilidad por minuto</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="probabilidad, iterStat : ${probabilidades}">
+                <td th:text="${iterStat.index}">Persona</td>
+                <td th:text="${probabilidad}">Probabilidad</td>
+            </tr>
+            </tbody>
+        </table>
+    </section>
+    </body>
+</html>
