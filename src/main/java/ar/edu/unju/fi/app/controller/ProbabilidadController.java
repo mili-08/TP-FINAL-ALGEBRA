@@ -17,6 +17,6 @@ public class ProbabilidadController {
        Long minimo=0L;
        List<Double> probabilidades = ProbabilidadPoisson.calcularProbabilidades(lambda,maximo,minimo);
         model.addAttribute("probabilidades", probabilidades);
-        return "tablaFrecuencia";
+        return "index";
     }
 }
